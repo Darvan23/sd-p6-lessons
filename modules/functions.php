@@ -88,4 +88,11 @@ function savePurchase(array $inputs):bool
 }
 
 
+function checkLogin ($inputs):string
+{
+    global $pdo;
+    $sql = 'SELECT * FROM `user` WHERE `email` = :e AND `password`=:P';
+    $sth = $pdo->prepare($sql)
+}
+
 
